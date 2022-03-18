@@ -2,7 +2,7 @@
 
 def split(text):
     text = text.lower()
-    text = re.sub(r"[^a-zß-ÿ\s.!?'-]", "", text)
+    text = re.sub(r"[^a-zß-ÿ\d\s.!?'-]", "", text)
     text = re.sub(r"[!?]|\.+", " .", text)
     text = re.sub(r"([^.])$", r"\1 .", text)
     return text.split()
