@@ -13,7 +13,7 @@ class Program(BaseWidget):
         self.length = ControlSlider("Length")
         self.length.max = 1000
         self.button = ControlButton("Speak")
-        self.button.value = self.showSpeech
+        self.button.value = self.makeSpeech
         self.text = ControlTextArea()
         self.formset = ["", ("", "file", "length", "button", ""), "", ("", "text", ""), ""]
 
@@ -24,7 +24,7 @@ class Program(BaseWidget):
         except FileNotFoundError:
             pass
 
-    def showSpeech(self):
+    def makeSpeech(self):
         self.text += "Eddy : " + self.eddy.speak(self.length.value) + "\n"
 
 start_app(Program)
