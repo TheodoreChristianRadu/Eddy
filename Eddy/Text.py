@@ -5,6 +5,7 @@ def split(text):
     text = re.sub(r"[^a-zß-ÿ\d\s.!?'-]", "", text)
     text = re.sub(r"[!?]|\.+", " .", text)
     text = re.sub(r"([^.])$", r"\1 .", text)
+    print(text)
     return text.split()
 
 def combine(words):

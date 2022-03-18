@@ -8,14 +8,14 @@ class Program(BaseWidget):
     def __init__(self):
         self.eddy = Eddy()
         super().__init__("Eddy")
-        self.file = ControlFile("Influence")
+        self.file = ControlFile("Influence :")
         self.file.changed_event = self.loadFile
-        self.length = ControlSlider("Length")
+        self.length = ControlSlider("Energy :")
         self.length.max = 1000
         self.button = ControlButton("Speak")
         self.button.value = self.makeSpeech
         self.text = ControlTextArea()
-        self.formset = ["", ("", "file", "length", "button", ""), "", ("", "text", ""), ""]
+        self.formset = ["", ("", "file", "", "length", "", "button", ""), "", ("", "text", ""), ""]
 
     def loadFile(self):
         try:
