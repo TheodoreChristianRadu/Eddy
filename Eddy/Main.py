@@ -1,6 +1,6 @@
-﻿from pyforms.basewidget import BaseWidget
-from pyforms.controls import ControlFile, ControlSlider, ControlButton, ControlTextArea
-from pyforms import start_app
+﻿from pyforms_lite.gui.basewidget import BaseWidget
+from pyforms_lite.controls import ControlFile, ControlSlider, ControlButton, ControlTextArea
+from pyforms_lite import start_app
 from Eddy import Eddy
 
 class Program(BaseWidget):

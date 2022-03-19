@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>Eddy</Name>
     <RootNamespace>Eddy</RootNamespace>
+    <InterpreterId>MSBuild|Python|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,11 +22,26 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Chain.py" />
     <Compile Include="Eddy.py" />
     <Compile Include="Main.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Text.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="Python\">
+      <Id>Python</Id>
+      <Version>3.9</Version>
+      <Description>Python (Python 3.9 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
