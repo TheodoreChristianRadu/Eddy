@@ -1,0 +1,36 @@
+<Window Title="Eddy" Width="720" Height="540" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Window.Resources>
+        <BitmapImage x:Key="Background" UriSource="Images/Eddy.png"/>
+        <BitmapImage x:Key="Speak" UriSource="Images/Pepe.png"/>
+        <BitmapImage x:Key="Open" UriSource="Images/Folder.png"/>
+        <Style x:Key="Icon" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Image Source="{TemplateBinding Tag}"/>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="RenderTransform">
+                                    <Setter.Value>
+                                        <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Viewbox Stretch="UniformToFill">
+        <Canvas Width="720" Height="515">
+            <Canvas.Background>
+                <ImageBrush ImageSource="{StaticResource Background}"/>
+            </Canvas.Background>
+            <TextBox Name="textbox" Width="350" Height="200" Margin="280,260" FontSize="14" TextWrapping="Wrap"/>
+            <Button Name="speakButton" Width="100" Margin="600,400" Style="{StaticResource Icon}" Tag="{StaticResource Speak}"/>
+            <Button Name="loadButton" Width="90" Margin="275,50" Style="{StaticResource Icon}" Tag="{StaticResource Open}"/>
+        </Canvas>
+    </Viewbox>
+</Window>
