@@ -1,5 +1,6 @@
 ﻿import wpf
 from System.Windows import Application, Window
+from System.Windows.Controls import DockPanel
 from Microsoft.Win32 import OpenFileDialog
 from Text import split, combine
 from Chains import Chain, ChainGroup
@@ -8,8 +9,6 @@ class Eddy(Window):
 
     def __init__(self):
         wpf.LoadComponent(self, 'Window.xaml')
-        self.speakButton.Click += self.speak
-        self.loadButton.Click += self.load
         self.chain = ChainGroup()
 
     def load(self, *args):
@@ -17,8 +16,29 @@ class Eddy(Window):
         dialog.Filter = "Text|*.txt"
         if dialog.ShowDialog():
             with open(dialog.FileName, encoding="utf-8") as data:
-                words = split(data.read())
-                self.chain.append(Chain(words))
+                if self.Slider(dialog.SafeFileName, self.tweak, self.sliders):
+                    words = split(data.read())
+                    self.chain.append(Chain(words))
+    
+    class Slider(DockPanel):
+        limit = 15
+        def __new__(cls, name, tweaked, parent):
+            if len(parent.Children) >= cls.limit:
+                return None
+            return super().__new__(cls)
+        def __init__(self, name, tweaked, parent):
+            wpf.LoadComponent(self, 'Slider.xaml')
+            self.name.Text = name
+            self.slider.Value = 5
+            self.slider.Tag = len(parent.Children)
+            self.slider.ValueChanged += tweaked
+            self.value.Text = "1.0"
+            parent.Children.Add(self)
+
+    def tweak(self, slider, *args):
+        weight = slider.Value / (10.1 - slider.Value)
+        slider.Parent.value.Text = "{:.1f}".format(weight)
+        self.chain[slider.Tag].weight = weight
 
     def speak(self, *args):
         words, word = [], "."

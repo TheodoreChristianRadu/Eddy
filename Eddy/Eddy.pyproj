@@ -27,6 +27,7 @@
     <Compile Include="Text.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Slider.xaml" />
     <Content Include="Window.xaml" />
   </ItemGroup>
   <ItemGroup>
