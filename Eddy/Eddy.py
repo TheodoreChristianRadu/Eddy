@@ -16,17 +16,16 @@ class Eddy(Window):
         dialog.Filter = "Text|*.txt"
         if dialog.ShowDialog():
             with open(dialog.FileName, encoding="utf-8") as data:
-                if self.Slider(dialog.SafeFileName, self.tweak, self.sliders):
+                if self.Slider(dialog.SafeFileName, self.sliders, self.tweak):
                     words = split(data.read())
                     self.chain.append(Chain(words))
     
     class Slider(DockPanel):
         limit = 15
-        def __new__(cls, name, tweaked, parent):
-            if len(parent.Children) >= cls.limit:
-                return None
+        def __new__(cls, name, parent, tweaked):
+            if len(parent.Children) >= cls.limit: return None
             return super().__new__(cls)
-        def __init__(self, name, tweaked, parent):
+        def __init__(self, name, parent, tweaked):
             wpf.LoadComponent(self, 'Slider.xaml')
             self.name.Text = name
             self.slider.Value = 5
