@@ -46,7 +46,7 @@ class Eddy(Window):
             word = self.chain(word)
             if word == "": break
             words.append(word)
-        self.textbox.Text += "Eddy : " + combine(words) + "\n"
+        self.textbox.Text += "\n" + "Eddy : " + combine(words) + "\n"
         self.textbox.ScrollToEnd()
 
 if __name__ == '__main__':

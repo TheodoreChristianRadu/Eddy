@@ -1,5 +1,5 @@
 ﻿from collections import defaultdict
-from random import choices
+from Random import choose
 
 class Chain():
     
@@ -12,7 +12,7 @@ class Chain():
     def __call__(self, word):
         options = list(self.map[word].keys())
         weights = list(self.map[word].values())
-        return choices(options, weights).pop() if sum(weights) != 0 else ""
+        return choose(options, weights) if sum(weights) != 0 else ""
 
     def __getitem__(self, word):
         weights = list(self.map[word].values())
@@ -26,4 +26,4 @@ class ChainGroup(list):
     def __call__(self, word):
         options = [chain(word) for chain in self]
         weights = [chain[word] for chain in self]
-        return choices(options, weights).pop() if sum(weights) != 0 else ""
+        return choose(options, weights) if sum(weights) != 0 else ""

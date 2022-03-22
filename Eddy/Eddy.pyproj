@@ -24,6 +24,7 @@
   <ItemGroup>
     <Compile Include="Chains.py" />
     <Compile Include="Eddy.py" />
+    <Compile Include="Random.py" />
     <Compile Include="Text.py" />
   </ItemGroup>
   <ItemGroup>
