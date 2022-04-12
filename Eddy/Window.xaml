@@ -2,7 +2,7 @@
     <Window.Resources>
         <BitmapImage x:Key="Background" UriSource="Images/Eddy.png"/>
         <BitmapImage x:Key="Speak" UriSource="Images/Pepe.png"/>
-        <BitmapImage x:Key="Load" UriSource="Images/Folder.png"/>
+        <BitmapImage x:Key="Load" UriSource="Images/Arrow.png"/>
         <ControlTemplate x:Key="Icon" TargetType="Button">
             <Image Source="{TemplateBinding Tag}"/>
             <ControlTemplate.Triggers>
@@ -24,7 +24,7 @@
         </Canvas.Background>
         <TextBox Name="textbox" Width="350" Height="200" Margin="280,260" FontSize="14" TextWrapping="Wrap"/>
         <Button Click="speak" Width="100" Margin="600,400" Template="{StaticResource Icon}" Tag="{StaticResource Speak}"/>
-        <Button Click="load" Width="90" Margin="275,50" Template="{StaticResource Icon}" Tag="{StaticResource Load}"/>
+        <Button Click="load" Width="90" Margin="295,30" Template="{StaticResource Icon}" Tag="{StaticResource Load}"/>
         <StackPanel Name="sliders"/>
     </Canvas>
 </Window>
