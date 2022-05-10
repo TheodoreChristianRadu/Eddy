@@ -2,7 +2,7 @@
     <DockPanel.Resources>
         <DropShadowEffect x:Key="Shadow" BlurRadius="5" ShadowDepth="0"/>
     </DockPanel.Resources>
-    <TextBlock Name="name" Foreground="White" Effect="{StaticResource Shadow}" DockPanel.Dock="Left"/>
-    <TextBlock Name="value" Foreground="White" Effect="{StaticResource Shadow}" DockPanel.Dock="Right"/>
+    <TextBlock Name="name" Foreground="DarkRed" Effect="{StaticResource Shadow}" DockPanel.Dock="Left"/>
+    <TextBlock Name="value" Foreground="DarkRed" Effect="{StaticResource Shadow}" DockPanel.Dock="Right"/>
     <Slider Name="slider" Margin="8,0"/>
 </DockPanel>

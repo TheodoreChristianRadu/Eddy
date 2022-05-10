@@ -1,4 +1,4 @@
-<Window Title="Eddy" Width="720" Height="540" ResizeMode="NoResize" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Window Title="Eddy" Width="720" Height="540" ResizeMode="NoResize" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:gauge="clr-namespace:CircularGauge;assembly=CircularGauge">
     <Window.Resources>
         <BitmapImage x:Key="Background" UriSource="Images/Eddy.png"/>
         <BitmapImage x:Key="Speak" UriSource="Images/Pepe.png"/>
@@ -18,7 +18,7 @@
             </ControlTemplate.Triggers>
         </ControlTemplate>
     </Window.Resources>
-    <Canvas Width="720" Height="515">
+    <Canvas Name="canvas" Width="720" Height="515">
         <Canvas.Background>
             <ImageBrush ImageSource="{StaticResource Background}"/>
         </Canvas.Background>
@@ -26,5 +26,6 @@
         <Button Click="speak" Width="100" Margin="600,400" Template="{StaticResource Icon}" Tag="{StaticResource Speak}"/>
         <Button Click="load" Width="90" Margin="295,30" Template="{StaticResource Icon}" Tag="{StaticResource Load}"/>
         <StackPanel Name="sliders"/>
+        <Canvas Name="knob" Margin="450,25"/>
     </Canvas>
 </Window>
