@@ -18,17 +18,17 @@
             </StackPanel>
         </ControlTemplate>
     </Canvas.Resources>
-    <gauge:CircularGaugeControl Name="gauge" MinValue="0" MaxValue="50"
+    <gauge:CircularGaugeControl Name="gauge" MinValue="0" MaxValue="100"
                                 Radius="100" PointerCapRadius="45" PointerLength="80" PointerThickness ="20"
-                                ScaleLabelRadius="93" ScaleLabelSize="15,15" ScaleLabelFontSize="10" ScaleLabelForeground="Black"
+                                ScaleLabelRadius="93" ScaleLabelSize="20,15" ScaleLabelFontSize="10" ScaleLabelForeground="Black"
                                 ScaleRadius="75" ScaleStartAngle="120" ScaleSweepAngle="300"
                                 MajorDivisionsCount="10" MinorDivisionsCount="5"
                                 MajorTickSize="13,3" MinorTickSize="5,1"
                                 MajorTickColor="White" MinorTickColor="LightGray"
                                 DialText="Energy" DialTextColor="DarkRed" DialTextOffset="50"
                                 RangeIndicatorLightRadius="10" RangeIndicatorLightOffset="80"
-                                OptimalRangeStartValue="0" OptimalRangeEndValue="25"
+                                OptimalRangeStartValue="0" OptimalRangeEndValue="50"
                                 GaugeBackgroundColor="DarkRed"/>
-    <Slider Name="slider" Width="200" Height="200" Minimum="0" Maximum="50" IsMoveToPointEnabled="True" Template="{StaticResource Slider}">
+    <Slider Name="slider" Width="200" Height="200" Minimum="0" Maximum="100" IsMoveToPointEnabled="True" Template="{StaticResource Slider}">
     </Slider>
 </Canvas>
