@@ -15,6 +15,6 @@ Mais oui c'est clair, lorqu'on parle de ces tous ces points de vue, on a ce qu'o
 
 Oui, c'est à dire, maintenant à ces moments-là il y a la relexation comme tel mais nous devons assurer ce qu'on appelle la systématique de l'orthodoxisation. In princip erat verbum. Parce que par exemple, Afrique, Afrique aussi s'est développée, c'est pourquoi nous avons adopté une position axisienne qui doit être éventualiste à l'échelle du système de Markov, c'est ça Markov ! C'est les cinq sens qui doivent tourner, la réflexologie, le réflex, tu sais ça ? Quand on parle de Markov, nous devons emphysiquer le documentalisme, documenter ça dans toute la République Démocratique du Congo pour que nous puissions avoir la congolexicomatisation des dépots propres aux congolais, je vous en prie.
 
-## Merci beaucoup monsieur Eddy
+## Merci beaucoup monsieur Eddy !
 
 Veni vidi vinci.
