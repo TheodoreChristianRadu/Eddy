@@ -17,4 +17,4 @@ Oui, c'est à dire, maintenant à ces moments-là il y a la relexation comme tel
 
 ## Merci beaucoup monsieur Eddy !
 
-Veni vidi vinci.
+Veni vidi vici.
